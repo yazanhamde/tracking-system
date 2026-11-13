@@ -1,0 +1,5 @@
+# Block direct web access to secrets, logs and dumps
+<FilesMatch "^(\.env.*|error_log|.*\.(log|sql|bak))$">
+  Require all denied
+</FilesMatch>
+Options -Indexes

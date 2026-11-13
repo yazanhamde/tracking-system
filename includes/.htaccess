@@ -1,0 +1,2 @@
+# PHP includes are loaded server-side only
+Require all denied
