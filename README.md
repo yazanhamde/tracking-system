@@ -1,6 +1,7 @@
 # 📍 Fleet, Employee & Inventory Tracking System
 
 **English** | [العربية](#-نظام-تتبع-الموظفين-والأسطول-والمستودع)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Yazan%20Hamdi-blue?logo=linkedin)](https://www.linkedin.com/in/yazan-hamdi/)
 
 A PHP/MySQL web app (installable PWA, Arabic RTL) for managing employees, drivers, vehicles and a parts warehouse in one place: live location tracking, attendance, trips, leave and overtime, fleet maintenance, inventory and reports — with role-based access for admins, employees and drivers.
 
