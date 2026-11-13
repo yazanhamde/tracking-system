@@ -26,6 +26,7 @@ PHP 8.x · MySQL/MariaDB (PDO) · Vanilla JS · Google Maps JavaScript API · PW
 
 ```
 ├── api/         # JSON endpoints (attendance, trips, fleet, inventory, notifications...)
+├── database/    # schema.sql
 ├── includes/    # config, auth, theme, HR helpers, upload helper
 ├── *.php        # Pages: admin, employee, driver, fleet, inventory, reports...
 ├── cron.php     # Per-minute job (attendance and alerts logic)
@@ -38,7 +39,7 @@ PHP 8.x · MySQL/MariaDB (PDO) · Vanilla JS · Google Maps JavaScript API · PW
 
 1. Copy the files to your server (e.g. `public_html/tracking/`).
 2. `cp .env.example .env` and fill in the database credentials, `SITE_URL` and `GMAPS_API_KEY`. Never commit `.env`.
-3. Create the MySQL database and import the schema (`database/schema.sql`, see notes below).
+3. Create an empty MySQL database and import `database/schema.sql` (30 tables, plus default leave types and warehouse shelf sections).
 4. Create the first admin user in the `employees` table (password hashed with PHP `password_hash()` / bcrypt).
 5. Create a writable `uploads/` folder. It must block script execution.
 6. Add cron jobs (replace the path):
@@ -79,7 +80,7 @@ MIT
 
 1. انسخ الملفات للسيرفر (مثلاً `public_html/tracking/`).
 2. `cp .env.example .env` وعبّي بيانات القاعدة و`SITE_URL` و`GMAPS_API_KEY`. لا ترفع `.env` أبداً.
-3. أنشئ قاعدة MySQL واستورد الـ schema.
+3. أنشئ قاعدة MySQL فاضية واستورد `database/schema.sql` (30 جدول مع أنواع الإجازات الافتراضية ورفوف المستودع).
 4. أنشئ أول مستخدم مدير بجدول `employees` (كلمة السر مشفّرة بـ `password_hash()`).
 5. أنشئ مجلد `uploads/` قابل للكتابة ويمنع تنفيذ السكربتات.
 6. أضف cron: `* * * * * php /home/YOUR_USER/public_html/tracking/cron.php`
